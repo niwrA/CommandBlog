@@ -1,0 +1,94 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandBlog", "CommandBlog\CommandBlog.csproj", "{26EF172E-0256-43A6-B3E0-0AEE0838C9EC}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "NotesControllerShared", "CommandBlogController\NotesControllerShared.shproj", "{2BFDF049-7FDE-45E2-A21D-E660A9B9A6DD}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "NoteCommandFactoryShared", "BlogCommandFactoryShared\NoteCommandFactoryShared.shproj", "{4FFC9E38-9C9D-4BD8-8186-E696903C81D1}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "NoteRepositoryShared", "NoteRepositoryShared\NoteRepositoryShared.shproj", "{C748275B-4015-4DA0-95CA-9B490AAD962C}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "NotesShared", "NotesShared\NotesShared.shproj", "{77ABD989-BB55-4C44-A8E6-75C62E8D81EF}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "NoteRepositoryObservableShared", "NoteRepositoryObservableShared\NoteRepositoryObservableShared.shproj", "{57FF5C88-596C-4930-B570-5753435E5D25}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "NoteCommandRepositoryShared", "NoteCommandRepositoryShared\NoteCommandRepositoryShared.shproj", "{2E2A4D51-BAE8-4104-AD22-44B4F1EF1D6C}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		BlogCommandFactoryShared\BlogCommandFactoryShared.projitems*{26ef172e-0256-43a6-b3e0-0aee0838c9ec}*SharedItemsImports = 4
+		CommandBlogController\CommandBlogController.projitems*{26ef172e-0256-43a6-b3e0-0aee0838c9ec}*SharedItemsImports = 4
+		NoteRepositoryObservableShared\NoteRepositoryObservableShared.projitems*{26ef172e-0256-43a6-b3e0-0aee0838c9ec}*SharedItemsImports = 4
+		NoteRepositoryShared\NoteRepositoryShared.projitems*{26ef172e-0256-43a6-b3e0-0aee0838c9ec}*SharedItemsImports = 4
+		NotesShared\NotesShared.projitems*{26ef172e-0256-43a6-b3e0-0aee0838c9ec}*SharedItemsImports = 4
+		CommandBlogController\CommandBlogController.projitems*{2bfdf049-7fde-45e2-a21d-e660a9b9a6dd}*SharedItemsImports = 13
+		NoteCommandRepositoryShared\NoteCommandRepositoryShared.projitems*{2e2a4d51-bae8-4104-ad22-44b4f1ef1d6c}*SharedItemsImports = 13
+		BlogCommandFactoryShared\BlogCommandFactoryShared.projitems*{4ffc9e38-9c9d-4bd8-8186-e696903c81d1}*SharedItemsImports = 13
+		NoteRepositoryObservableShared\NoteRepositoryObservableShared.projitems*{57ff5c88-596c-4930-b570-5753435e5d25}*SharedItemsImports = 13
+		NotesShared\NotesShared.projitems*{77abd989-bb55-4c44-a8e6-75c62e8d81ef}*SharedItemsImports = 13
+		NoteRepositoryShared\NoteRepositoryShared.projitems*{c748275b-4015-4da0-95ca-9b490aad962c}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{26EF172E-0256-43A6-B3E0-0AEE0838C9EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26EF172E-0256-43A6-B3E0-0AEE0838C9EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26EF172E-0256-43A6-B3E0-0AEE0838C9EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26EF172E-0256-43A6-B3E0-0AEE0838C9EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 14
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://niwra.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = BlogCommandFactoryShared\\NoteCommandFactoryShared.shproj
+		SccProjectName1 = BlogCommandFactoryShared
+		SccLocalPath1 = BlogCommandFactoryShared
+		SccProjectUniqueName2 = CommandBlog\\CommandBlog.csproj
+		SccProjectName2 = CommandBlog
+		SccLocalPath2 = CommandBlog
+		SccProjectUniqueName3 = CommandBlogController\\CommandBlogController.projitems
+		SccProjectTopLevelParentUniqueName3 = CommandBlogController\\NotesControllerShared.shproj
+		SccProjectName3 = CommandBlogController
+		SccLocalPath3 = CommandBlogController
+		SccProjectUniqueName4 = CommandBlogController\\NotesControllerShared.shproj
+		SccProjectName4 = CommandBlogController
+		SccLocalPath4 = CommandBlogController
+		SccProjectUniqueName5 = NoteCommandRepositoryShared\\NoteCommandRepositoryShared.projitems
+		SccProjectTopLevelParentUniqueName5 = NoteCommandRepositoryShared\\NoteCommandRepositoryShared.shproj
+		SccProjectName5 = NoteCommandRepositoryShared
+		SccLocalPath5 = NoteCommandRepositoryShared
+		SccProjectUniqueName6 = NoteCommandRepositoryShared\\NoteCommandRepositoryShared.shproj
+		SccProjectName6 = NoteCommandRepositoryShared
+		SccLocalPath6 = NoteCommandRepositoryShared
+		SccProjectUniqueName7 = NoteRepositoryObservableShared\\NoteRepositoryObservableShared.shproj
+		SccProjectName7 = NoteRepositoryObservableShared
+		SccLocalPath7 = NoteRepositoryObservableShared
+		SccProjectUniqueName8 = NoteRepositoryShared\\NoteRepositoryShared.shproj
+		SccProjectName8 = NoteRepositoryShared
+		SccLocalPath8 = NoteRepositoryShared
+		SccProjectUniqueName9 = NotesShared\\NotesShared.shproj
+		SccProjectName9 = NotesShared
+		SccLocalPath9 = NotesShared
+		SccProjectUniqueName10 = NotesShared\\NotesShared.projitems
+		SccProjectName10 = NotesShared
+		SccLocalPath10 = NotesShared
+		SccProjectUniqueName11 = NoteRepositoryObservableShared\\NoteRepositoryObservableShared.projitems
+		SccProjectName11 = NoteRepositoryObservableShared
+		SccLocalPath11 = NoteRepositoryObservableShared
+		SccProjectUniqueName12 = BlogCommandFactoryShared\\BlogCommandFactoryShared.projitems
+		SccProjectName12 = BlogCommandFactoryShared
+		SccLocalPath12 = BlogCommandFactoryShared
+		SccProjectUniqueName13 = NoteRepositoryShared\\NoteRepositoryShared.projitems
+		SccProjectName13 = NoteRepositoryShared
+		SccLocalPath13 = NoteRepositoryShared
+	EndGlobalSection
+EndGlobal

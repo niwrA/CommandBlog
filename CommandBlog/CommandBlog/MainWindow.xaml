@@ -1,0 +1,80 @@
+﻿<Window x:Class="Note.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Note"
+        xmlns:vm="clr-namespace:NoteControllerShared"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type vm:NoteViewModel}">
+            <Grid MouseLeftButtonDown="NoteListLeftButtonClick" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button fa:Awesome.Content="Play" 
+        TextElement.FontFamily="pack://application:,,,/FontAwesome.WPF;component/#FontAwesome" Grid.Column="0" Click="PlaybackClick"></Button>
+                <TextBlock Grid.Column="1" TextWrapping="Wrap" Margin="5,5,5,5" Text="{Binding Path=Text, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBlock>
+                <Button fa:Awesome.Content="Remove" 
+        TextElement.FontFamily="pack://application:,,,/FontAwesome.WPF;component/#FontAwesome" Grid.Column="2" Click="DeleteNoteClick"></Button>
+                <Button fa:Awesome.Content="Edit" 
+        TextElement.FontFamily="pack://application:,,,/FontAwesome.WPF;component/#FontAwesome" Grid.Column="3" Click="EditNoteClick"></Button>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:NoteEditModel}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="NoteEditText" Grid.Column="0" TextWrapping="Wrap" Margin="5,5,5,5" Text="{Binding Path=Text, Mode=TwoWay}" TextChanged="NoteEditText_TextChanged"></TextBox>
+                <Button fa:Awesome.Content="Check" 
+        TextElement.FontFamily="pack://application:,,,/FontAwesome.WPF;component/#FontAwesome" Grid.Column="1"  Click="ConfirmEditNoteClick"></Button>
+            </Grid>
+        </DataTemplate>
+
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.3*"></ColumnDefinition>
+            <ColumnDefinition Width="0.7*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBox TextWrapping="Wrap" x:Name="NoteText" Grid.Column="0" MinLines="6"></TextBox>
+            <Button Grid.Column="1" Click="AddNoteClick">Add</Button>
+            <ListView Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ItemsSource="{Binding Path=DisplayCommands, Mode=OneWay}" HorizontalContentAlignment="Stretch">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid >
+                            <TextBlock TextWrapping="Wrap" Margin="5,5,5,5" Text="{Binding Path=.}"></TextBlock>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Grid.Row="2" Click="ReplayAllClick">Replay All</Button>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <ListView SelectionChanged="ListView_SelectionChanged" Grid.Row="0" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ItemsSource="{Binding Path=DisplayNotes, Mode=OneWay}" HorizontalContentAlignment="Stretch">
+            </ListView>
+            <TextBlock x:Name="PlaybackTextBlock" Grid.Row="1"></TextBlock>
+        </Grid>
+    </Grid>
+</Window>
